@@ -35,7 +35,7 @@ pipeline{
             } 
         }
     }
-    post{.
+    post{
         always{
                 sh 'rm -rf .venv'
             }
