@@ -23,7 +23,8 @@ pipeline{
                 echo "Testing project ..."
                 sh '''
                 . .venv/bin/activate
-                python3 -m pytest ./src/test.py
+                cd ./src
+                python3 -m pytest test.py
                 '''
             }
             
@@ -34,7 +35,7 @@ pipeline{
             } 
         }
     }
-    post{
+    post{.
         always{
                 sh 'rm -rf .venv'
             }
