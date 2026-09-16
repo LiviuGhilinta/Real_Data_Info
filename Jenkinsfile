@@ -6,7 +6,7 @@ pipeline{
                 echo "Building project ..."
                 sh '''
                 python3 --version
-                python3 -m pip install --upgrade pip
+                apt install python3-pip
                 pip install pytest
                 echo "Everything is installed! Next Step"
                 ''' 
