@@ -23,7 +23,7 @@ pipeline{
                 echo "Testing project ..."
                 sh '''
                 . .venv/bin/activate
-                python3 -m pytest test.py
+                python3 -m pytest ./src/test.py
                 '''
             }
             
